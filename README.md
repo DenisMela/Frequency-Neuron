@@ -24,12 +24,13 @@ Something different this neuron can do compared to traditional Feedforward neuro
 
 This network also has the ability to send the same input multiple times, with each repeated input having it's own weight value that is multiplied together before being summed to produce the final input value for that connection and in total all connections in that neuron. 
 
-Any Feedfoward style network can be converted into a network that impliments frequency neurons by:
+Any Basic Feedfoward network can be converted into a network that impliments frequency neurons by:
 - Converting hidden layers into sync layers (add a delay time that is consecutive to eachother so they don't all activate at the same time. For example 4, 8, 12, 16), 
 - Create a frequency for each neuron connection
 - Every neuron connection may only fire once
 - Change the activation function to use only positive input values
 - Deactivate the neuron once it has sent a signal to all of its output connections
+- Have the network operate in real time (for weights, sync layers)
 
 
 
