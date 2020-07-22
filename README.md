@@ -1,4 +1,4 @@
-# Frequency-Neuron for a Feedforward neural network
+# Frequency-Neuron for Feedforward neural networks
 
 The frequency neuron is a new artificial neuron I invented that uses frequencies to produce weight values. Traditional artificial neurons in Feedforward networks use predetermined weight values, in this case weight values are determined by the duration of time the recieved input waits inside the neuron before being processed. This means in order to change the weight value for the recieved input, the input connection frequency should be changed. Every connection, both input and output, contains its own frequency for every neuron, therefore every connection contains its own set of produced weights.
 
