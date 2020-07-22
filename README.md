@@ -8,9 +8,10 @@ Since this neuron uses time as the weight variable, it's impossible to have a we
 
 Time based weight acumulation can also be non-liniar, so instead of increasing linearly by miliseconds the weight can be modified by a function to produce non-linear weight.
 
-You might have asked "What happens to the input when the neuron outputs a value?" I have four ideas for this:
--Either the input is destroyed once the neuron outputs the value to the connection, OR
--The input stays in the neuron, and accumulates more weight until every output connection has been sent a value, then it is destroyed or the neuron is deactivated.  OR
+You might have asked "What happens to the input when the neuron outputs a value?" I have four ideas for this
+
+- Either the input is destroyed once the neuron outputs the value to the connection, OR
+- The input stays in the neuron, and accumulates more weight until every output connection has been sent a value, then it is destroyed or the neuron is deactivated.  OR
 - The input stays in the neuron, but is reduced a certain amount (for example divide total weight by 2) then continue accumilating more weight normally. OR
 - The input stays in the neuron, but is reduced a certain amount (for example divide total weight by 2) then continue accumilating more weight but the accumilation of weight is modified(increased/decreased speed of weight accuminlation for total input connections or even for specific ones)
 
