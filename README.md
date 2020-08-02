@@ -6,7 +6,7 @@ You may be asking "How can this work if the network is designed in layers? Neuro
 
 Since this neuron uses time as the weight variable, it's impossible to have a weight with a negative value. This is why the non-linear activation function used should be altered to only accept positive values (there can't be negative time).
 
-Time based weight acumulation can also be non-liniar, so instead of increasing linearly by miliseconds the weight can be modified by a function to produce non-linear weight.
+Time based weight acumulation can also be non-liniar, so instead of increasing linearly by miliseconds the weight can be modified by a non-liniar function to produce non-linear weight.
 
 You might have asked "What happens to the input when the neuron outputs a value?" I have four ideas for this
 
