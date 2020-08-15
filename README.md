@@ -17,9 +17,9 @@ You might have asked "What happens to the input when the neuron outputs a value?
 
 This is how a Feedforward network can be designed using frequency neurons. 
 
-"How would you train this kind of network?" First calculate the weights for all connections. The weight value for every connection can be converted to a frequency using the current and previos sync layer start time relative to the simulation start time. From here the frequency can be changed to produce the weight of the desired result. 
+"How would you train this kind of network?" First calculate the weights for all connections. The weight value for every connection can be converted to a frequency using the current and previos sync layer start time relative to the simulation start time. From here the frequency can be changed to produce the weight of the desired result and backpropagation algorithms can be implimented to train the network exactly as if the network used regular neurons. 
 
-An example: If you set each connection to fire only once, and have each sync layer a delay of 12 seconds consecutively, and the initial input value for all connections is 1, the maximum weight value any connection can have in the first sync layer is 11.999. If you're using an altered sigmoid activation function, a single connection in this example is enough to result in an output of 0.999999. But lets say each neuron has 6 input connections and the sync layer delay time is 2. If all connections recieve an input the moment the sync group activates, the output for each neuron would also be 0.999999 even though the maximum weight value for each connection is 1.9999 and the input value is 1.
+Example: If you set each connection to fire only once, and have each sync layer a delay of 12 seconds consecutively, and the initial input value for all connections is 1, the maximum weight value any connection can have in the first sync layer is 11.999. If you're using an altered sigmoid activation function, a single connection in this example is enough to result in an output of 0.999999. But lets say each neuron has 6 input connections and the sync layer delay time is 2. If all connections recieve an input the moment the sync group activates, the output for each neuron would also be 0.999999 even though the maximum weight value for each connection is 1.9999 and the input value is 1.
 
 This neuron has the ability to scale weights based on time. The longer the inputs wait in the recieving end of a neuron, the larger the weight becomes. This means not only can weights be changed by the input frequency of each connection, but the output frequency for every connection can determine the total weight values of all its inputs.
 
@@ -31,6 +31,8 @@ Any Basic Feedfoward network can be converted into a network that impliments fre
 - Every neuron connection may only fire once
 - Change the activation function to use only positive input values
 - Deactivate the neuron once it has sent a signal to all of its output connections
+
+This network doesn't need to operate in real time, the values for the weights can be calculated simply by using all sync layer start times and the frequencies for all connections.
 
 
 
